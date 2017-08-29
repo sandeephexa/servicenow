@@ -43,7 +43,7 @@ intents.matches('add_user', [
     function (session, args) {
         var gr = new GlideRecord('dev43073', 'sys_user', 'admin', 'DEUCD78YCgkJ');
         console.log('srinivasan is the good boy'+JSON.stringify(args));
-        session.send(responseString);
+        session.send('srinivasan is the good boy');
     }
 ]);
 
