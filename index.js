@@ -51,7 +51,7 @@ intents.matches('add_user', [
         }
         else
         {
-             session.send("Firstname is"+firstname.entity + lastname.entity + title.entity + title.entity + emails.entity + username.entity + password.entity);
+             session.send("Firstname is");
         }
     }
 ]);
