@@ -32,7 +32,7 @@ var connector = new builder.ChatConnector({
     appId: 'd60f4a2a-5926-42c5-baa6-db7a8ddcd162',
     appPassword: '2uiQBbbGGAhkxnGVJDBeb9X'
 });
-server.post('/api/messages', connector.listen());
+server.post('/', connector.listen());
 var bot = new builder.UniversalBot(connector);
 var recognizer = new apiairecognizer('854ef36ee9ff4389baf041d8f87e40e0');
 bot.recognizer(recognizer);
