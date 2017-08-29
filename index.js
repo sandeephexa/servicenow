@@ -40,7 +40,10 @@ intents.matches('add_user', [
     function (session, args) {
         var gr = new GlideRecord('dev43073', 'sys_user', 'admin', 'DEUCD78YCgkJ');
         var firstname = builder.EntityRecognizer.findEntity(args.entities, 'firstname');
-        session.send(firstname);
+        if(firstname.entity)
+        {
+        session.send("Firstname is"+firstname.entity);
+        }
     }
 ]);
 
