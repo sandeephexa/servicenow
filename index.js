@@ -32,10 +32,8 @@ var intents = new builder.IntentDialog({ recognizers: [recognizer] });
 bot.dialog('/', intents);
 intents.matches('Default Welcome Intent', [
     function (session, args) {
-        console.log("Welcome-message Fired");
-        console.log("Args : " + JSON.stringify(args));
-        var responseString = "Hi, what can i do for you \n1.Add User\n2.Add Devices"
-        session.send(responseString);
+       var firstname = builder.EntityRecognizer.findEntity(args.entities, 'firstname');
+        session.send(firstname);
     }
 ]);//Welcome Intent Fired
 
