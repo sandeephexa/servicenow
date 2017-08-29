@@ -39,10 +39,10 @@ intents.matches('Default Welcome Intent', [
     }
 ]);//Welcome Intent Fired
 
-intents.matches('Add user', [
+intents.matches('add_user', [
     function (session, args) {
         var gr = new GlideRecord('dev43073', 'sys_user', 'admin', 'DEUCD78YCgkJ');
-        console.log('srinivasan is the good boy');
+        console.log('srinivasan is the good boy'+JSON.stringify(args));
         session.send(responseString);
     }
 ]);
