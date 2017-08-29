@@ -38,7 +38,7 @@ var recognizer = new apiairecognizer('854ef36ee9ff4389baf041d8f87e40e0');
 bot.recognizer(recognizer);
 var intents = new builder.IntentDialog({ recognizers: [recognizer] });
 bot.dialog('/', intents);
-intents.matches('Welcome-message', [
+intents.matches('Default Welcome Intent', [
     function (session, args) {
         console.log("Welcome-message Fired");
         console.log("Args : " + JSON.stringify(args));
