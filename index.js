@@ -32,16 +32,15 @@ var intents = new builder.IntentDialog({ recognizers: [recognizer] });
 bot.dialog('/', intents);
 intents.matches('Default Welcome Intent', [
     function (session, args) {
-       var firstname = builder.EntityRecognizer.findEntity(args.entities, 'firstname');
-        session.send(firstname);
+        session.send("What would you like to do?\n\n1.Add User\n\n2.Add Device");
     }
 ]);//Welcome Intent Fired
 
 intents.matches('add_user', [
     function (session, args) {
         var gr = new GlideRecord('dev43073', 'sys_user', 'admin', 'DEUCD78YCgkJ');
-        console.log('srinivasan is the good boy'+JSON.stringify(args));
-        session.send('srinivasan is the good boy');
+        var firstname = builder.EntityRecognizer.findEntity(args.entities, 'firstname');
+        session.send(firstname);
     }
 ]);
 
