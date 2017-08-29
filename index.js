@@ -40,9 +40,14 @@ intents.matches('add_user', [
     function (session, args) {
         var gr = new GlideRecord('dev43073', 'sys_user', 'admin', 'DEUCD78YCgkJ');
         var firstname = builder.EntityRecognizer.findEntity(args.entities, 'firstname');
-        if(firstname.entity)
+        var lastname = builder.EntityRecognizer.findEntity(args.entities, 'lastname');
+        var title = builder.EntityRecognizer.findEntity(args.entities, 'title');
+        var emails = builder.EntityRecognizer.findEntity(args.entities, 'email');
+         var username = builder.EntityRecognizer.findEntity(args.entities, 'username');
+         var password = builder.EntityRecognizer.findEntity(args.entities, 'password');
+        if(firstname.entity && lastname.entity && title.entity && title.entity && emails.entity && username.entity && password.entity)
         {
-        session.send("Firstname is"+firstname.entity);
+        session.send("Firstname is"+firstname.entity + lastname.entity + title.entity + title.entity + emails.entity + username.entity + password.entity);
         }
     }
 ]);
