@@ -34,7 +34,7 @@ var connector = new builder.ChatConnector({
 });
 server.post('/api/messages', connector.listen());
 var bot = new builder.UniversalBot(connector);
-var recognizer = new apiairecognizer('50ab8ddd9a594abfbe4cfe1a951dee8d');
+var recognizer = new apiairecognizer('854ef36ee9ff4389baf041d8f87e40e0');
 bot.recognizer(recognizer);
 var intents = new builder.IntentDialog({ recognizers: [recognizer] });
 bot.dialog('/', intents);
