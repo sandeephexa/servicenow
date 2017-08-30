@@ -50,12 +50,11 @@ intents.matches('add_user', [
      
      if(firstname.hasOwnProperty('entity'))
         {
-         session.send(speech);
-            
+         session.send(firstname.entity);
+    
         }
      else if (fulfillment) {
          var speech = fulfillment.entity;        
-         session.send(speech);
          session.send(speech);
      }
      
