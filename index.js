@@ -48,7 +48,7 @@ intents.matches('add_user', [
         var fulfillment = builder.EntityRecognizer.findEntity(args.entities, 'fulfillment');
      if (fulfillment) {
          var speech = fulfillment.entity;        
-         session.send(speech);
+         session.send(speech+JSON.stringify(args));
      }
      
         else if(firstname.hasOwnProperty('entity') && lastname.hasOwnProperty('entity') && title.hasOwnProperty('entity') && title.hasOwnProperty('entity') && emails.hasOwnProperty('entity') && username.hasOwnProperty('entity') && password.hasOwnProperty(entity))
