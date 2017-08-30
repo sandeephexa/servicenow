@@ -53,7 +53,8 @@ intents.matches('add_user', [
      }
       
      if (fulfillment) {
-         var speech = fulfillment.entity;          session.send(speech);
+         var speech = fulfillment.entity;   
+         session.send(speech+JSON.stringify(args));
      }
         else
         {
