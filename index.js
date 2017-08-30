@@ -52,7 +52,7 @@ intents.matches('add_user', [
          session.send(speech+JSON.stringify(args));
      }
      
-       if(actionIncomplete)
+       if(!actionIncomplete)
         {
         session.send("Firstname is"+firstname.entity + lastname.entity + title.entity + title.entity + emails.entity + username.entity + password.entity);
         }
