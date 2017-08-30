@@ -49,7 +49,7 @@ intents.matches('add_user', [
         var actionIncomplete = builder.EntityRecognizer.findEntity(args.entities, 'actionIncomplete');
      if (fulfillment) {
          var speech = fulfillment.entity;        
-         session.send(speech+JSON.stringify(args));
+         session.send(speech);
      }
      
        if(!actionIncomplete)
