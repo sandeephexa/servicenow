@@ -46,12 +46,13 @@ intents.matches('add_user', [
         var username = builder.EntityRecognizer.findEntity(args.entities, 'username');
         var password = builder.EntityRecognizer.findEntity(args.entities, 'password');
         var fulfillment = builder.EntityRecognizer.findEntity(args.entities, 'fulfillment');
+        var actionIncomplete = builder.EntityRecognizer.findEntity(args.entities, 'actionIncomplete');
      if (fulfillment) {
          var speech = fulfillment.entity;        
          session.send(speech+JSON.stringify(args));
      }
      
-        else if(firstname.hasOwnProperty('entity') && lastname.hasOwnProperty('entity') && title.hasOwnProperty('entity') && title.hasOwnProperty('entity') && emails.hasOwnProperty('entity') && username.hasOwnProperty('entity') && password.hasOwnProperty(entity))
+       if(actionIncomplete)
         {
         session.send("Firstname is"+firstname.entity + lastname.entity + title.entity + title.entity + emails.entity + username.entity + password.entity);
         }
