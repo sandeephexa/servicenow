@@ -51,7 +51,7 @@ intents.matches('add_user', [
          session.send(speech);
      }
      
-        if(firstname.hasOwnProperty('entity') && lastname.hasOwnProperty('entity') && title.hasOwnProperty('entity') && title.hasOwnProperty('entity') && emails.hasOwnProperty('entity') && username.hasOwnProperty('entity') && password.hasOwnProperty(entity))
+        else if(firstname.hasOwnProperty('entity') && lastname.hasOwnProperty('entity') && title.hasOwnProperty('entity') && title.hasOwnProperty('entity') && emails.hasOwnProperty('entity') && username.hasOwnProperty('entity') && password.hasOwnProperty(entity))
         {
         session.send("Firstname is"+firstname.entity + lastname.entity + title.entity + title.entity + emails.entity + username.entity + password.entity);
         }
