@@ -43,12 +43,17 @@ intents.matches('add_user', [
         var lastname = builder.EntityRecognizer.findEntity(args.entities, 'lastname');
         var title = builder.EntityRecognizer.findEntity(args.entities, 'title');
         var emails = builder.EntityRecognizer.findEntity(args.entities, 'email');
-         var username = builder.EntityRecognizer.findEntity(args.entities, 'username');
-         var password = builder.EntityRecognizer.findEntity(args.entities, 'password');
-         var fulfillment = builder.EntityRecognizer.findEntity(args.entities, 'fulfillment');
+        var username = builder.EntityRecognizer.findEntity(args.entities, 'username');
+        var password = builder.EntityRecognizer.findEntity(args.entities, 'password');
+        var fulfillment = builder.EntityRecognizer.findEntity(args.entities, 'fulfillment');
+        var fulfillment = builder.EntityRecognizer.findEntity(args.entities, 'fulfillment');
      if (fulfillment) {
          var speech = fulfillment.entity;        
          session.send(speech);
+     }
+      
+     if (fulfillment) {
+         var speech = fulfillment.entity;          session.send(speech);
      }
         else
         {
